@@ -4,7 +4,7 @@ Aplicación web completa para la gestión de un gimnasio. Incluye landing page p
 
 ## 🚀 Demo en producción
 
-> [Reemplaza con tu URL de Vercel/Netlify]
+https://spartan-elite.vercel.app/
 
 ## 🛠️ Stack tecnológico
 
