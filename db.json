@@ -1,0 +1,41 @@
+{
+  "socios": [
+    { "id": "1", "nombre": "Juan García", "correo": "juan@email.com", "telefono": "3001234567", "fecha_inscripcion": "2024-01-15", "estado": "activo", "id_membresia": "2" },
+    { "id": "2", "nombre": "María López", "correo": "maria@email.com", "telefono": "3109876543", "fecha_inscripcion": "2024-02-20", "estado": "activo", "id_membresia": "1" },
+    { "id": "3", "nombre": "Carlos Pérez", "correo": "carlos@email.com", "telefono": "3205556677", "fecha_inscripcion": "2024-03-10", "estado": "inactivo", "id_membresia": "3" },
+    { "id": "4", "nombre": "Ana Martínez", "correo": "ana@email.com", "telefono": "3154443322", "fecha_inscripcion": "2024-04-05", "estado": "activo", "id_membresia": "2" },
+    { "id": "5", "nombre": "Luis Rodríguez", "correo": "luis@email.com", "telefono": "3001112233", "fecha_inscripcion": "2024-05-01", "estado": "activo", "id_membresia": "1" }
+  ],
+  "membresias": [
+    { "id": "1", "nombre": "Básico", "descripcion": "Acceso sala de pesas y vestuarios", "precio": 150000, "duracion_dias": 30, "beneficios": "Acceso sala de pesas, Vestuarios, Horario estándar", "estado": "activo" },
+    { "id": "2", "nombre": "Élite", "descripcion": "Acceso completo con clases grupales", "precio": 220000, "duracion_dias": 30, "beneficios": "Todo básico, Clases grupales, Evaluación mensual, App de seguimiento", "estado": "activo" },
+    { "id": "3", "nombre": "Spartan", "descripcion": "Plan premium con entrenador personal", "precio": 300000, "duracion_dias": 30, "beneficios": "Todo élite, Entrenador personal, Nutrición personalizada, Acceso 24/7", "estado": "activo" }
+  ],
+  "pagos": [
+    { "id": "1", "id_socio": "1", "id_membresia": "2", "fecha_pago": "2024-05-01T10:00:00", "monto": 220000, "metodo_pago": "tarjeta", "estado_pago": "pagado", "referencia": "REF-001" },
+    { "id": "2", "id_socio": "2", "id_membresia": "1", "fecha_pago": "2024-05-03T11:30:00", "monto": 150000, "metodo_pago": "efectivo", "estado_pago": "pagado", "referencia": "REF-002" },
+    { "id": "3", "id_socio": "3", "id_membresia": "3", "fecha_pago": "2024-05-10T09:00:00", "monto": 300000, "metodo_pago": "transferencia", "estado_pago": "pendiente", "referencia": "REF-003" },
+    { "id": "4", "id_socio": "4", "id_membresia": "2", "fecha_pago": "2024-05-15T14:00:00", "monto": 220000, "metodo_pago": "nequi", "estado_pago": "pagado", "referencia": "REF-004" }
+  ],
+  "entrenadores": [
+    { "id": "1", "nombre": "Pedro Vargas", "correo": "pedro@spartan.com", "telefono": "3001112233", "especialidad": "CrossFit", "estado": "activo", "fecha_ingreso": "2022-01-10" },
+    { "id": "2", "nombre": "Laura Gómez", "correo": "laura@spartan.com", "telefono": "3109998877", "especialidad": "Musculación y Fuerza", "estado": "activo", "fecha_ingreso": "2021-06-15" },
+    { "id": "3", "nombre": "Diego Torres", "correo": "diego@spartan.com", "telefono": "3205554433", "especialidad": "Boxing y Artes Marciales", "estado": "activo", "fecha_ingreso": "2023-03-01" },
+    { "id": "4", "nombre": "Sara Ruiz", "correo": "sara@spartan.com", "telefono": "3154445566", "especialidad": "Functional Training", "estado": "inactivo", "fecha_ingreso": "2020-09-20" }
+  ],
+  "clases": [
+    { "id": "1", "nombre": "CrossFit", "descripcion": "Entrenamiento funcional de alta intensidad", "horario": "07:00 - 08:00", "cupos_maximos": 20, "nivel": "Intermedio", "id_entrenador": "1", "estado": "activo" },
+    { "id": "2", "nombre": "Musculación", "descripcion": "Sala de pesas libre con guía", "horario": "09:00 - 10:30", "cupos_maximos": 30, "nivel": "Todos", "id_entrenador": "2", "estado": "activo" },
+    { "id": "3", "nombre": "Boxing", "descripcion": "Técnica y cardio con boxeo", "horario": "18:00 - 19:00", "cupos_maximos": 15, "nivel": "Principiante", "id_entrenador": "3", "estado": "activo" },
+    { "id": "4", "nombre": "Functional", "descripcion": "Entrenamiento funcional con peso corporal", "horario": "19:30 - 20:30", "cupos_maximos": 18, "nivel": "Avanzado", "id_entrenador": "1", "estado": "activo" }
+  ],
+  "equipos": [
+    { "id": "1", "nombre": "Cinta de correr Pro", "tipo": "Cardio", "estado_funcionamiento": "Bueno", "fecha_adquisicion": "2023-01-15", "observaciones": "Mantenimiento al día" },
+    { "id": "2", "nombre": "Rack de sentadillas", "tipo": "Fuerza", "estado_funcionamiento": "Bueno", "fecha_adquisicion": "2022-06-10", "observaciones": "" },
+    { "id": "3", "nombre": "Bicicleta estática", "tipo": "Cardio", "estado_funcionamiento": "Regular", "fecha_adquisicion": "2021-11-20", "observaciones": "Requiere revisión del freno" },
+    { "id": "4", "nombre": "Saco de boxeo", "tipo": "Combate", "estado_funcionamiento": "Bueno", "fecha_adquisicion": "2023-03-05", "observaciones": "" },
+    { "id": "5", "nombre": "Mancuernas 5-30kg", "tipo": "Fuerza", "estado_funcionamiento": "Bueno", "fecha_adquisicion": "2022-08-01", "observaciones": "Juego completo" }
+  ],
+  "inscripciones": [],
+  "uso_equipos": []
+}
