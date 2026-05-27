@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const BASE_URL = 'http://localhost:3005'
+const BASE_URL = 'https://spartan-elite-api.onrender.com'
 
 const api = axios.create({
   baseURL: BASE_URL,
