@@ -4,6 +4,13 @@ import { sociosService, membresiasService, pagosService, entrenadoresService, cl
 import Spinner from '../../components/Spinner'
 import { formatPrice } from '../../utils/helpers'
 
+import sociosPorNombre from '../../assets/socios_por_nombre.png'
+import sociosPorEstado from '../../assets/socios_por_estado.png'
+import clasesPorNivel from '../../assets/clases_por_nivel.png'
+import sociosThomas from '../../assets/socios_thomas.png'
+import clasesCupos from '../../assets/clases_cupos.png'
+import membresiasAltas from '../../assets/membresias_altas.png'
+
 export default function DashboardPage() {
   const [stats, setStats] = useState(null)
   const [loading, setLoading] = useState(true)
@@ -50,11 +57,13 @@ export default function DashboardPage() {
 
   return (
     <div className="p-8">
+      {/* Header */}
       <div className="mb-8">
         <h1 className="font-display font-black text-4xl uppercase text-light">Dashboard</h1>
         <p className="text-muted mt-1">Resumen general de Spartan Elite GYM</p>
       </div>
 
+      {/* Stats cards */}
       {loading ? <Spinner label="Cargando estadísticas..." /> : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {CARDS.map((card) => (
@@ -74,12 +83,74 @@ export default function DashboardPage() {
       )}
 
       {/* Quick actions */}
-      <div className="mt-10">
+      <div className="mt-8">
         <h2 className="font-display font-bold text-xl uppercase text-light mb-4">Acciones rápidas</h2>
         <div className="flex flex-wrap gap-3">
           <Link to="/admin/socios" className="btn-red text-xs">+ Nuevo socio</Link>
           <Link to="/admin/pagos" className="btn-ghost text-xs">+ Registrar pago</Link>
           <Link to="/admin/clases" className="btn-ghost text-xs">+ Nueva clase</Link>
+        </div>
+      </div>
+
+      {/* Gráficas */}
+      <div className="mt-10">
+        <h2 className="font-display font-bold text-2xl uppercase text-light mb-2">
+          Análisis de Datos
+        </h2>
+        <p className="text-muted text-sm mb-6">
+          Generado con Python — pandas, matplotlib y seaborn
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          <div className="bg-surface border border-border p-4 animate-slide-up">
+            <h3 className="font-display font-bold uppercase text-light text-sm mb-3 flex items-center gap-2">
+              <span className="w-1 h-4 bg-red inline-block" />
+              Socios activos por nombre
+            </h3>
+            <img src={sociosPorNombre} alt="Socios por nombre" className="w-full rounded" />
+          </div>
+
+          <div className="bg-surface border border-border p-4 animate-slide-up">
+            <h3 className="font-display font-bold uppercase text-light text-sm mb-3 flex items-center gap-2">
+              <span className="w-1 h-4 bg-red inline-block" />
+              Socios activos vs bloqueados
+            </h3>
+            <img src={sociosPorEstado} alt="Socios por estado" className="w-full rounded" />
+          </div>
+
+          <div className="bg-surface border border-border p-4 animate-slide-up">
+            <h3 className="font-display font-bold uppercase text-light text-sm mb-3 flex items-center gap-2">
+              <span className="w-1 h-4 bg-red inline-block" />
+              Clases por nivel
+            </h3>
+            <img src={clasesPorNivel} alt="Clases por nivel" className="w-full rounded" />
+          </div>
+
+          <div className="bg-surface border border-border p-4 animate-slide-up">
+            <h3 className="font-display font-bold uppercase text-light text-sm mb-3 flex items-center gap-2">
+              <span className="w-1 h-4 bg-red inline-block" />
+              Socios Thomas: activos vs bloqueados
+            </h3>
+            <img src={sociosThomas} alt="Socios Thomas" className="w-full rounded" />
+          </div>
+
+          <div className="bg-surface border border-border p-4 animate-slide-up">
+            <h3 className="font-display font-bold uppercase text-light text-sm mb-3 flex items-center gap-2">
+              <span className="w-1 h-4 bg-red inline-block" />
+              Clases con muchos cupos
+            </h3>
+            <img src={clasesCupos} alt="Clases con muchos cupos" className="w-full rounded" />
+          </div>
+
+          <div className="bg-surface border border-border p-4 animate-slide-up">
+            <h3 className="font-display font-bold uppercase text-light text-sm mb-3 flex items-center gap-2">
+              <span className="w-1 h-4 bg-red inline-block" />
+              Membresías altas por estado
+            </h3>
+            <img src={membresiasAltas} alt="Membresías altas" className="w-full rounded" />
+          </div>
+
         </div>
       </div>
     </div>
