@@ -60,15 +60,7 @@ cd spartan-elite
 npm install
 ```
 
-### 2. Instalar JSON Server
-```bash
-npm install -g json-server
-```
-
-### 3. Correr la API (Terminal 1)
-```bash
-json-server --watch db.json --port 3005
-```
+const BASE_URL = 'https://spartan-elite-api.onrender.com'
 
 ### 4. Correr la app (Terminal 2)
 ```bash
